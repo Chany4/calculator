@@ -6,8 +6,8 @@ body {
 }
 
 .container {
-   padding: 2em;
-   border: 2px solid black; 
+   padding: 2.5em;
+   border: 3px solid black; 
    width: fit-content;
    min-height: fit-content;
    background-color: pink;
@@ -17,19 +17,21 @@ body {
 .row {
     display: flex;
     justify-content: space-around;
-    margin: 1em 0;
+    margin: 7% 0;
 }
+
 
 input {
     width: 50px;
+    height: 50px;
     margin: 0 .1em;
-    border-radius: .2pc;
-    background-color: grey;
-    color: white;
+    border-radius: 20px;
+    background-color: white;
+    color: black;
     box-shadow: .7px 2px 2px black;
     transition: all .1s;
+    font-size: 100x;
 }
-
 input:active {
     box-shadow: .7px 2px 2px rgba(87, 87, 87, 0.74);
 }
@@ -38,4 +40,10 @@ input:active {
     width: 200px;
     height: 3em;
     box-shadow: none;
+}
+
+input:hover{
+    background-color: rgb(255, 121, 143);
+    font-weight: bold;
+    color: white;
 }
