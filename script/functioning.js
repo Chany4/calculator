@@ -5,8 +5,21 @@ document.addEventListener('DOMContentLoaded', () => {
     buttons.forEach(button => {
         button.addEventListener('click', () => {
             const value = button.value;
+            const currentDisplayValue = display.value;
+            if ('+'.includes(value) && '+'.split('').some(char => currentDisplayValue.includes(char))) {
+                return;
+            }else if ('-'.includes(value) && '-'.split('').some(char => currentDisplayValue.includes(char))) {
+                return;
+            }else if ('*'.includes(value) && '*'.split('').some(char => currentDisplayValue.includes(char))) {
+                return;
+            }else if ('/'.includes(value) && '/'.split('').some(char => currentDisplayValue.includes(char))) {
+                return;
+            }else if ('.'.includes(value) && '.'.split('').some(char => currentDisplayValue.includes(char))) {
+                return;    
+            }
 
             switch (value) {
+                
                 case 'CE':
                     clearDisplay();
                     break;
@@ -20,6 +33,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     turnOff();
                     break;
                 default:
+                    
                     appendCharacter(value);
                     break;
             }
